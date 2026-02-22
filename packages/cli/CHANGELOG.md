@@ -1,5 +1,11 @@
 ## 5.6.0
 
+## 7.2.4
+
+### Patch Changes
+
+- d1e8490: Create skill
+
 ## 7.2.3
 
 ### Patch Changes
