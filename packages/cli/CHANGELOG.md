@@ -1,3 +1,9 @@
+## 7.10.6
+
+### Patch Changes
+
+- 2d5bbdb: Declare the `jsPluginSettings` named export in the `ultracite/oxlint/js-plugins` type declarations, so the documented (and `ultracite init`-generated) `import jsPlugins, { jsPluginSettings } from "ultracite/oxlint/js-plugins"` type-checks (#773)
+
 ## 7.10.5
 
 ### Patch Changes
