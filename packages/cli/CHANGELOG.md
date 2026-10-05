@@ -1,3 +1,15 @@
+## 7.13.0
+
+### Minor Changes
+
+- f753c14: Add opt-in TSDoc syntax validation and public TypeScript API documentation checks to the Oxlint `js-plugins` preset. Selecting a plugin with `--js-plugins` on a config that extends the full `js-plugins` preset now keeps the preset's plugins.
+- d5523c5: `ultracite init` takes `--workspace-framework <path>=<framework>` for monorepos whose workspaces use different frameworks. For each workspace, it writes an Oxlint, Biome or ESLint config in that directory that extends the root config and adds the workspace's presets, so framework rules only run where they apply and editors see the same rules as `ultracite check`.
+
+### Patch Changes
+
+- 6c7e149: `ultracite init` no longer hangs on a `.pre-commit-config.yaml` or lefthook config with CRLF line endings and many consecutive comment lines. The check that keeps the file's sequence indentation could backtrack exponentially on that input.
+- 7f085b2: Type `jsPlugins` as a non-null array on the Oxlint presets that always ship plugins (`js-plugins`, `shadcn`, `anti-slop`, `next/js-plugins`, `tanstack/js-plugins`) and on `selectJsPlugins()`'s return value, so spreading several of them into a root `jsPlugins` array typechecks.
+
 ## 7.12.2
 
 ### Patch Changes
